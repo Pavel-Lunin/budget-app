@@ -30,7 +30,6 @@ let appData = {
                 //Оператор if(...) вычисляет условие в скобках и, если результат true, то выполняет блок кода.
 
                 if (typeof (a) === 'string' && typeof (a) != null && typeof (b) != null && a != "" && b != "" && a.length < 50) {
-
                     appData.expenses[a] = b;
                 } else {
                     i--;
@@ -56,6 +55,7 @@ let appData = {
                 console.log("Ошибочка...!");
             }
         },
+
         checkSavings: function () {
             if (appData.savings == true) {
                 let save = +prompt("Какова сумма накоплений?"),
@@ -65,6 +65,7 @@ let appData = {
                 alert("доход в месяц с вашего депозита: " + appData.monthIncome);
             }
         },
+
         chooseOptExpenses: function () {
             // Функция для определения необязательных расходов
             for (let i = 1; i <= 3; i++) {
@@ -73,6 +74,7 @@ let appData = {
                 console.log(appData.optionalExpenses);
             }
         },
+
         chooseIncome: function () {
             let items = prompt('Что принесёт дополнительный доход? (перечислите через запятую)', '');
 
@@ -91,6 +93,7 @@ let appData = {
                 });
             }
         };
+        
         //где key - очередное имя свойства объекта для каждой итерации
         for (let key in appData) {
             console.log("Наша программа включает в себя данные: " + key + " - " + appData[key]);
